@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Auditoria Solar Independente — Kucharsky Elétrica</title>
+<meta name="description" content="Análise técnica e mercadológica independente de orçamentos de energia solar. Laudo em até 24h úteis. Sem vínculo com fornecedores.">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', Arial, sans-serif; color: #1a2744; }
+  a { text-decoration: none; }
+
+  /* HERO */
+  .hero { background: #0d2157; color: #fff; padding: 80px 24px 64px; text-align: center; }
+  .hero-eyebrow { font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: #7ab3e8; margin-bottom: 20px; }
+  .hero h1 { font-size: 36px; font-weight: 600; line-height: 1.25; margin-bottom: 20px; max-width: 680px; margin-left: auto; margin-right: auto; }
+  .hero p { font-size: 17px; color: #b8cfe8; line-height: 1.7; max-width: 560px; margin: 0 auto 36px; }
+  .btn-cta { display: inline-block; background: #f0a500; color: #0d2157; font-weight: 700; font-size: 16px; padding: 16px 36px; border-radius: 6px; }
+  .btn-cta:hover { background: #e09400; }
+  .badge-strip { display: flex; justify-content: center; gap: 28px; margin-top: 40px; flex-wrap: wrap; }
+  .badge { font-size: 13px; color: #7ab3e8; display: flex; align-items: center; gap: 6px; }
+  .badge::before { content: '✓'; color: #f0a500; font-weight: 700; }
+
+  /* SECTIONS */
+  .section { padding: 64px 24px; max-width: 860px; margin: 0 auto; }
+  .section-label { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: #7ab3e8; margin-bottom: 12px; }
+  .section h2 { font-size: 26px; font-weight: 600; color: #0d2157; margin-bottom: 20px; }
+  .section p { font-size: 16px; line-height: 1.75; color: #3d4f6e; }
+
+  .alert-box { background: #fff8e6; border-left: 4px solid #f0a500; padding: 20px 24px; border-radius: 4px; margin: 28px 0; font-size: 15px; color: #5a4200; line-height: 1.7; }
+
+  /* HOW IT WORKS */
+  .how-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-top: 36px; }
+  .how-card { background: #f4f7fb; border-radius: 10px; padding: 28px 22px; }
+  .step-num { font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: #7ab3e8; margin-bottom: 10px; }
+  .how-card h3 { font-size: 16px; font-weight: 600; color: #0d2157; margin-bottom: 10px; }
+  .how-card p { font-size: 14px; color: #5a6a88; line-height: 1.65; }
+
+  .divider { border: none; border-top: 1px solid #e4eaf4; margin: 0 24px; }
+
+  /* PRICING */
+  .pricing { background: #f4f7fb; padding: 64px 24px; }
+  .pricing-inner { max-width: 860px; margin: 0 auto; }
+  .pricing h2 { font-size: 26px; font-weight: 600; color: #0d2157; margin-bottom: 10px; text-align: center; }
+  .pricing-sub { text-align: center; font-size: 15px; color: #5a6a88; margin-bottom: 40px; }
+  .price-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; }
+  .price-card { background: #fff; border: 1px solid #d0daea; border-radius: 10px; padding: 32px 22px; text-align: center; }
+  .price-card.featured { border: 2px solid #0d2157; }
+  .price-tag { font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: #7ab3e8; margin-bottom: 10px; }
+  .price-type { font-size: 18px; font-weight: 600; color: #0d2157; margin-bottom: 4px; }
+  .price-desc { font-size: 13px; color: #8a9ab8; margin-bottom: 20px; }
+  .price-value { font-size: 38px; font-weight: 700; color: #0d2157; }
+  .price-period { font-size: 13px; color: #8a9ab8; margin-top: 4px; }
+  .price-extra { font-size: 13px; color: #5a6a88; margin-top: 16px; padding-top: 16px; border-top: 1px solid #e4eaf4; line-height: 1.65; }
+
+  /* WHY */
+  .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; margin-top: 32px; }
+  .why-item { display: flex; gap: 16px; align-items: flex-start; }
+  .why-icon { width: 40px; height: 40px; border-radius: 8px; background: #e8f0fb; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 18px; }
+  .why-item h3 { font-size: 15px; font-weight: 600; color: #0d2157; margin-bottom: 5px; }
+  .why-item p { font-size: 14px; color: #5a6a88; line-height: 1.65; }
+
+  /* CTA BOTTOM */
+  .cta-bottom { background: #0d2157; padding: 72px 24px; text-align: center; color: #fff; }
+  .cta-bottom h2 { font-size: 28px; font-weight: 600; margin-bottom: 14px; }
+  .cta-bottom p { font-size: 16px; color: #b8cfe8; margin-bottom: 36px; max-width: 500px; margin-left: auto; margin-right: auto; }
+
+  /* FOOTER */
+  footer { background: #08153a; padding: 32px 24px; text-align: center; }
+  footer p { font-size: 12px; color: #4d6080; line-height: 1.8; }
+
+  /* RESPONSIVE */
+  @media (max-width: 600px) {
+    .hero h1 { font-size: 26px; }
+    .badge-strip { gap: 14px; }
+    .section h2, .pricing h2, .cta-bottom h2 { font-size: 22px; }
+    .price-value { font-size: 30px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-eyebrow">Kucharsky Elétrica — Auditoria Solar Independente</div>
+  <h1>Antes de assinar o contrato de energia solar, certifique-se de que o orçamento está correto.</h1>
+  <p>Análise técnica e mercadológica independente realizada por engenheiro eletricista. Sem vínculo com fornecedores. Sem conflito de interesse.</p>
+  <a href="https://wa.me/55XXXXXXXXXXX?text=Olá!%20Gostaria%20de%20solicitar%20uma%20auditoria%20solar." class="btn-cta">Enviar orçamento para análise →</a>
+  <div class="badge-strip">
+    <span class="badge">Laudo entregue em até 24h úteis</span>
+    <span class="badge">100% online via WhatsApp</span>
+    <span class="badge">Nota Fiscal emitida</span>
+  </div>
+</section>
+
+<!-- O PROBLEMA -->
+<div class="section">
+  <div class="section-label">O problema</div>
+  <h2>O mercado solar cresce — e os erros de dimensionamento também.</h2>
+  <p>A expansão acelerada do setor fotovoltaico trouxe junto um problema recorrente: orçamentos com sistemas superdimensionados ou subdimensionados, preços por Watt acima da média regional e promessas de payback que não resistem a uma análise criteriosa.</p>
+  <div class="alert-box">
+    <strong>Antes de investir entre R$ 15.000 e R$ 150.000 em um sistema solar, você tem o direito de saber:</strong><br><br>
+    O sistema foi dimensionado corretamente para o seu consumo real? O preço cobrado por Watt instalado é compatível com o mercado? O tempo de retorno do investimento (payback) é tecnicamente viável?
+  </div>
+  <p>Nossa auditoria responde a essas perguntas com base em dados técnicos e mercadológicos, de forma isenta — sem nenhum vínculo com fabricantes ou instaladores.</p>
+</div>
+
+<hr class="divider">
+
+<!-- COMO FUNCIONA -->
+<div class="section">
+  <div class="section-label">Como funciona</div>
+  <h2>Três etapas. Laudo em até 24 horas úteis.</h2>
+  <div class="how-grid">
+    <div class="how-card">
+      <div class="step-num">Etapa 01</div>
+      <h3>Envie o orçamento</h3>
+      <p>Encaminhe o PDF do orçamento recebido e a foto da sua última conta de energia pelo WhatsApp.</p>
+    </div>
+    <div class="how-card">
+      <div class="step-num">Etapa 02</div>
+      <h3>Análise técnica</h3>
+      <p>Verificamos o dimensionamento do sistema, a qualidade dos equipamentos e o preço por Watt praticado na sua região.</p>
+    </div>
+    <div class="how-card">
+      <div class="step-num">Etapa 03</div>
+      <h3>Laudo em PDF + áudio</h3>
+      <p>Você recebe o laudo completo com veredito técnico (Verde, Amarelo ou Vermelho) e orientações objetivas para a negociação.</p>
+    </div>
+  </div>
+</div>
+
+<!-- PREÇOS -->
+<div class="pricing">
+  <div class="pricing-inner">
+    <h2>Valores por categoria de instalação</h2>
+    <p class="pricing-sub">Análise de um orçamento principal inclusa. Orçamentos adicionais para comparativo têm custo incremental.</p>
+    <div class="price-grid">
+      <div class="price-card">
+        <div class="price-tag">Categoria 01</div>
+        <div class="price-type">Residencial</div>
+        <div class="price-desc">Sistemas até ~10 kWp</div>
+        <div class="price-value">R$ 99</div>
+        <div class="price-period">por laudo</div>
+        <div class="price-extra">+ R$ 30 por orçamento comparativo adicional<br>Reanálise: R$ 30 (válido por 7 dias)</div>
+      </div>
+      <div class="price-card featured">
+        <div class="price-tag">Categoria 02</div>
+        <div class="price-type">Comercial</div>
+        <div class="price-desc">Sistemas de médio porte</div>
+        <div class="price-value">R$ 199</div>
+        <div class="price-period">por laudo</div>
+        <div class="price-extra">+ R$ 60 por orçamento comparativo adicional<br>Reanálise: R$ 99 (válido por 7 dias)</div>
+      </div>
+      <div class="price-card">
+        <div class="price-tag">Categoria 03</div>
+        <div class="price-type">Industrial</div>
+        <div class="price-desc">Sistemas de grande porte</div>
+        <div class="price-value">R$ 299</div>
+        <div class="price-period">por laudo</div>
+        <div class="price-extra">+ R$ 90 por orçamento comparativo adicional<br>Reanálise: R$ 149 (válido por 7 dias)</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- POR QUE NÓS -->
+<div class="section">
+  <div class="section-label">Por que nos contratar</div>
+  <h2>Isenção técnica que o instalador não pode oferecer.</h2>
+  <div class="why-grid">
+    <div class="why-item">
+      <div class="why-icon">⚡</div>
+      <div>
+        <h3>Engenheiro eletricista responsável</h3>
+        <p>Análise conduzida por profissional habilitado, com formação técnica em sistemas fotovoltaicos.</p>
+      </div>
+    </div>
+    <div class="why-item">
+      <div class="why-icon">🔍</div>
+      <div>
+        <h3>Sem vínculo comercial</h3>
+        <p>Não vendemos equipamentos nem recebemos comissão de instaladores. Nosso único compromisso é com a precisão da análise.</p>
+      </div>
+    </div>
+    <div class="why-item">
+      <div class="why-icon">📄</div>
+      <div>
+        <h3>Laudo com nota fiscal</h3>
+        <p>Documento formal emitido com NFS-e pelo Simples Nacional. Transparência fiscal em todos os atendimentos.</p>
+      </div>
+    </div>
+    <div class="why-item">
+      <div class="why-icon">⏱</div>
+      <div>
+        <h3>Entrega em até 24h úteis</h3>
+        <p>Processo estruturado que garante agilidade sem comprometer a profundidade da análise.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA FINAL -->
+<section class="cta-bottom">
+  <h2>Solicite sua auditoria agora</h2>
+  <p>Envie o PDF do orçamento pelo WhatsApp e receba o laudo técnico independente em até 24 horas úteis.</p>
+  <a href="https://wa.me/55XXXXXXXXXXX?text=Olá!%20Gostaria%20de%20solicitar%20uma%20auditoria%20solar." class="btn-cta">Iniciar auditoria pelo WhatsApp →</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>Kucharsky Elétrica Ltda — CNPJ [00.000.000/0001-00]<br>
+  Serviço de consultoria analítico-mercadológica. Não constitui projeto executivo de engenharia.</p>
+</footer>
+
+</body>
+</html>
