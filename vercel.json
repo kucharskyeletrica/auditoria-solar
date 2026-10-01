@@ -1,6 +1,14 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/",
+      "has": [{ "type": "host", "value": "solar.kucharskyeletrica.com" }],
+      "destination": "https://kucharskyeletrica.com/analise-solar",
+      "permanent": false
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",
