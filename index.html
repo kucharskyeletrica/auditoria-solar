@@ -5,9 +5,53 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Auditoria Solar Independente — Kucharsky Elétrica</title>
 <meta name="description" content="Análise técnica e mercadológica independente de orçamentos de energia solar. Laudo em até 24h úteis. Sem vínculo com fornecedores.">
+<link rel="canonical" href="https://auditoria.kucharskyeletrica.com/">
+<meta name="theme-color" content="#0d2157">
+
+<!-- Ícones -->
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+<!-- Prévia ao compartilhar (WhatsApp, Facebook, Instagram, LinkedIn) -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Kucharsky Elétrica">
+<meta property="og:url" content="https://auditoria.kucharskyeletrica.com/">
+<meta property="og:title" content="Auditoria Solar Independente — Kucharsky Elétrica">
+<meta property="og:description" content="Seu orçamento de energia solar analisado por engenheiro eletricista, sem vínculo com fornecedores. Laudo em até 24h úteis.">
+<meta property="og:image" content="https://auditoria.kucharskyeletrica.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Auditoria Solar Independente — Kucharsky Elétrica">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- Dados estruturados para o Google -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Kucharsky Elétrica — Auditoria Solar Independente",
+  "legalName": "Kucharsky Elétrica Ltda",
+  "taxID": "66.766.392/0001-02",
+  "url": "https://auditoria.kucharskyeletrica.com/",
+  "image": "https://auditoria.kucharskyeletrica.com/og-image.png",
+  "telephone": "+55 47 99646-3350",
+  "description": "Análise técnica e mercadológica independente de orçamentos de energia solar, com laudo em até 24h úteis.",
+  "priceRange": "R$ 99 – R$ 299",
+  "makesOffer": [
+    { "@type": "Offer", "name": "Auditoria Solar Residencial", "price": "99", "priceCurrency": "BRL" },
+    { "@type": "Offer", "name": "Auditoria Solar Comercial", "price": "199", "priceCurrency": "BRL" },
+    { "@type": "Offer", "name": "Auditoria Solar Industrial", "price": "299", "priceCurrency": "BRL" }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: 'Segoe UI', Arial, sans-serif; color: #1a2744; }
+  body { font-family: 'Inter', 'Segoe UI', Arial, sans-serif; color: #1a2744; }
   a { text-decoration: none; }
 
   /* HERO */
@@ -45,13 +89,19 @@
   .pricing-sub { text-align: center; font-size: 15px; color: #5a6a88; margin-bottom: 40px; }
   .price-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; }
   .price-card { background: #fff; border: 1px solid #d0daea; border-radius: 10px; padding: 32px 22px; text-align: center; }
+  .price-card { display: flex; flex-direction: column; position: relative; }
   .price-card.featured { border: 2px solid #0d2157; }
+  .featured-badge { position: absolute; top: -13px; left: 50%; transform: translateX(-50%); background: #f0a500; color: #0d2157; font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 5px 12px; border-radius: 20px; white-space: nowrap; }
+  .btn-card { display: block; margin-top: auto; background: #0d2157; color: #fff; font-weight: 600; font-size: 14px; padding: 12px 16px; border-radius: 6px; }
+  .btn-card:hover { background: #1a3378; }
+  .price-card.featured .btn-card { background: #f0a500; color: #0d2157; }
+  .price-card.featured .btn-card:hover { background: #e09400; }
   .price-tag { font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: #7ab3e8; margin-bottom: 10px; }
   .price-type { font-size: 18px; font-weight: 600; color: #0d2157; margin-bottom: 4px; }
   .price-desc { font-size: 13px; color: #8a9ab8; margin-bottom: 20px; }
   .price-value { font-size: 38px; font-weight: 700; color: #0d2157; }
   .price-period { font-size: 13px; color: #8a9ab8; margin-top: 4px; }
-  .price-extra { font-size: 13px; color: #5a6a88; margin-top: 16px; padding-top: 16px; border-top: 1px solid #e4eaf4; line-height: 1.65; }
+  .price-extra { font-size: 13px; color: #5a6a88; margin: 16px 0 24px; padding-top: 16px; border-top: 1px solid #e4eaf4; line-height: 1.65; }
 
   /* WHY */
   .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; margin-top: 32px; }
@@ -66,8 +116,13 @@
   .cta-bottom p { font-size: 16px; color: #b8cfe8; margin-bottom: 36px; max-width: 500px; margin-left: auto; margin-right: auto; }
 
   /* FOOTER */
-  footer { background: #08153a; padding: 32px 24px; text-align: center; }
+  footer { background: #08153a; padding: 32px 24px 100px; text-align: center; }
   footer p { font-size: 12px; color: #4d6080; line-height: 1.8; }
+
+  /* WHATSAPP FLUTUANTE */
+  .wa-float { position: fixed; right: 20px; bottom: 20px; z-index: 100; width: 60px; height: 60px; border-radius: 50%; background: #25d366; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 14px rgba(0,0,0,.25); transition: transform .15s; }
+  .wa-float:hover { transform: scale(1.08); }
+  .wa-float svg { width: 32px; height: 32px; fill: #fff; }
 
   /* RESPONSIVE */
   @media (max-width: 600px) {
@@ -136,21 +191,24 @@
     <h2>Valores por categoria de instalação</h2>
     <p class="pricing-sub">Análise de um orçamento principal inclusa. Orçamentos adicionais para comparativo têm custo incremental.</p>
     <div class="price-grid">
-      <div class="price-card">
+      <div class="price-card featured">
+        <div class="featured-badge">Mais procurado</div>
         <div class="price-tag">Categoria 01</div>
         <div class="price-type">Residencial</div>
         <div class="price-desc">Sistemas até ~10 kWp</div>
         <div class="price-value">R$ 99</div>
         <div class="price-period">por laudo</div>
         <div class="price-extra">+ R$ 30 por orçamento comparativo adicional<br>Reanálise: R$ 30 (válido por 7 dias)</div>
+        <a href="https://wa.me/5547996463350?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20uma%20auditoria%20solar%20Residencial." class="btn-card">Quero a auditoria Residencial</a>
       </div>
-      <div class="price-card featured">
+      <div class="price-card">
         <div class="price-tag">Categoria 02</div>
         <div class="price-type">Comercial</div>
         <div class="price-desc">Sistemas de médio porte</div>
         <div class="price-value">R$ 199</div>
         <div class="price-period">por laudo</div>
         <div class="price-extra">+ R$ 60 por orçamento comparativo adicional<br>Reanálise: R$ 99 (válido por 7 dias)</div>
+        <a href="https://wa.me/5547996463350?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20uma%20auditoria%20solar%20Comercial." class="btn-card">Quero a auditoria Comercial</a>
       </div>
       <div class="price-card">
         <div class="price-tag">Categoria 03</div>
@@ -159,6 +217,7 @@
         <div class="price-value">R$ 299</div>
         <div class="price-period">por laudo</div>
         <div class="price-extra">+ R$ 90 por orçamento comparativo adicional<br>Reanálise: R$ 149 (válido por 7 dias)</div>
+        <a href="https://wa.me/5547996463350?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20uma%20auditoria%20solar%20Industrial." class="btn-card">Quero a auditoria Industrial</a>
       </div>
     </div>
   </div>
@@ -212,6 +271,14 @@
   <p>Kucharsky Elétrica Ltda — CNPJ 66.766.392/0001-02<br>
   Serviço de consultoria analítico-mercadológica. Não constitui projeto executivo de engenharia.</p>
 </footer>
+
+<!-- BOTÃO FLUTUANTE WHATSAPP -->
+<a href="https://wa.me/5547996463350?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20uma%20auditoria%20solar." class="wa-float" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16.04 3C8.86 3 3.04 8.82 3.04 16c0 2.29.6 4.53 1.74 6.5L3 29l6.68-1.75A12.95 12.95 0 0 0 16.04 29C23.22 29 29 23.18 29 16S23.22 3 16.04 3zm0 23.8c-2.04 0-4.03-.55-5.77-1.58l-.41-.25-3.96 1.04 1.06-3.86-.27-.4A10.77 10.77 0 0 1 5.24 16c0-5.95 4.85-10.8 10.8-10.8 5.95 0 10.76 4.85 10.76 10.8 0 5.95-4.81 10.8-10.76 10.8zm5.92-8.08c-.32-.16-1.92-.95-2.22-1.06-.3-.11-.51-.16-.73.16-.22.32-.84 1.06-1.03 1.27-.19.22-.38.24-.7.08-.32-.16-1.36-.5-2.6-1.6-.96-.86-1.6-1.91-1.8-2.23-.19-.32-.02-.5.14-.66.15-.14.32-.38.49-.57.16-.19.22-.32.32-.54.11-.22.05-.4-.03-.57-.08-.16-.73-1.75-1-2.4-.26-.63-.53-.54-.73-.55h-.62c-.22 0-.57.08-.86.4-.3.32-1.13 1.1-1.13 2.69 0 1.58 1.16 3.12 1.32 3.33.16.22 2.28 3.48 5.52 4.88.77.33 1.37.53 1.84.68.77.25 1.48.21 2.03.13.62-.09 1.92-.78 2.19-1.54.27-.76.27-1.41.19-1.54-.08-.14-.3-.22-.62-.38z"/></svg>
+</a>
+
+<!-- Contador de visitas (Vercel Web Analytics) -->
+<script defer src="/_vercel/insights/script.js"></script>
 
 </body>
 </html>
