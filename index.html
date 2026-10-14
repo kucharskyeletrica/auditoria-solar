@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kucharsky Elétrica — Análises técnicas em energia solar e eletricidade</title>
-<meta name="description" content="Análise independente de orçamentos de energia solar (todo o Brasil, exceto SC e PR), de projetos elétricos (todo o Brasil) e de instalações elétricas no norte de Santa Catarina. Técnico em eletroeletrônica graduado em Engenharia Elétrica, com emissão de TRT.">
+<meta name="description" content="Análise independente de orçamentos de energia solar (todo o Brasil, exceto SC e PR), de projetos elétricos (todo o Brasil) e vistoria de instalações elétricas com emissão de TRT no norte de Santa Catarina. Técnico em eletroeletrônica e bacharel em Engenharia Elétrica.">
 <link rel="canonical" href="https://kucharskyeletrica.com/">
 <meta name="theme-color" content="#f5f5f7">
 
@@ -18,8 +18,8 @@
 <meta property="og:site_name" content="Kucharsky Elétrica">
 <meta property="og:url" content="https://kucharskyeletrica.com/">
 <meta property="og:title" content="Kucharsky Elétrica — Análises técnicas em energia solar e eletricidade">
-<meta property="og:description" content="Análise de orçamentos de energia solar (exceto SC e PR), de projetos elétricos e de instalações elétricas no norte de SC. Com emissão de TRT.">
-<meta property="og:image" content="https://kucharskyeletrica.com/og-empresa.png">
+<meta property="og:description" content="Análise de orçamentos de energia solar (exceto SC e PR), de projetos elétricos e vistoria de instalações elétricas com TRT no norte de SC.">
+<meta property="og:image" content="https://kucharskyeletrica.com/og-empresa.png?v=3">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Kucharsky Elétrica — Análises técnicas em energia solar e eletricidade">
@@ -34,15 +34,16 @@
   "legalName": "Kucharsky Elétrica Ltda",
   "taxID": "66.766.392/0001-02",
   "url": "https://kucharskyeletrica.com/",
-  "image": "https://kucharskyeletrica.com/og-empresa.png",
+  "image": "https://kucharskyeletrica.com/og-empresa.png?v=3",
   "telephone": "+55 47 99646-3350",
   "email": "gabriel@kucharskyeletrica.com",
+  "sameAs": ["https://www.instagram.com/kucharskyeletrica/"],
   "description": "Análise independente de orçamentos de energia solar (todo o Brasil, exceto SC e PR), de projetos elétricos (todo o Brasil) e de instalações elétricas no norte de Santa Catarina.",
   "areaServed": ["BR", "Norte de Santa Catarina"],
   "founder": {
     "@type": "Person",
     "name": "Gabriel Kucharsky",
-    "jobTitle": "Técnico em eletroeletrônica, graduado em Engenharia Elétrica"
+    "jobTitle": "Técnico em eletroeletrônica, bacharel em Engenharia Elétrica"
   },
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
@@ -60,264 +61,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <script src="js/site.js"></script>
-<style>
-  /* Cores e medidas da marca (as mesmas dos Reels) */
-  :root {
-    --bg: #f5f5f7;
-    --black: #000;
-    --ink: #1d1d1f;
-    --muted: #6e6e73;
-    --muted-dark: #a1a1a6;
-    --accent: #f5a300;
-    --accent-text: #b06d00;
-    --card: #fff;
-    --card-dark: #1c1c1e;
-    --line: #d2d2d7;
-    --ok: #30d158;
-    --ease: cubic-bezier(.16, 1, .3, 1);
-    --shadow: 0 1px 2px rgba(0,0,0,.04), 0 12px 32px rgba(0,0,0,.07);
-    --shadow-hover: 0 2px 4px rgba(0,0,0,.05), 0 24px 48px rgba(0,0,0,.11);
-  }
-
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; scroll-padding-top: 72px; }
-  body { font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif; color: var(--ink); background: var(--bg); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
-  a { color: inherit; text-decoration: none; }
-  svg { display: block; }
-  .wrap { max-width: 1120px; margin: 0 auto; }
-  .accent { color: var(--accent-text); }
-  .dark .accent { color: var(--accent); }
-
-  /* LOGO (KUCHAR⚡KY) */
-  .logo { height: 34px; width: auto; color: var(--ink); }
-  .logo text { font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif; }
-  .dark .logo, footer .logo { color: #f5f5f7; }
-
-  /* CHECK AMARELO (desenha ao aparecer) */
-  .chk { width: 22px; height: 22px; flex-shrink: 0; }
-  .chk path { stroke-dasharray: 20; stroke-dashoffset: 0; }
-  .js .reveal .chk path { stroke-dashoffset: 20; transition: stroke-dashoffset .5s var(--ease) calc(var(--d, 0) * 90ms + 350ms); }
-  .js .reveal.in .chk path { stroke-dashoffset: 0; }
-
-  /* ENTRADA AO ROLAR */
-  .js .reveal { opacity: 0; transform: translateY(28px); transition: opacity .9s var(--ease), transform .9s var(--ease); transition-delay: calc(var(--d, 0) * 90ms); }
-  .js .reveal.in { opacity: 1; transform: none; }
-  .js .circle-reveal { clip-path: circle(0% at 50% 30%); transition: clip-path 1.4s var(--ease); }
-  .js .circle-reveal.in { clip-path: circle(120% at 50% 30%); }
-
-  /* CABEÇALHO */
-  .nav { position: sticky; top: 0; z-index: 50; background: rgba(245,245,247,.78); -webkit-backdrop-filter: saturate(180%) blur(20px); backdrop-filter: saturate(180%) blur(20px); border-bottom: 1px solid transparent; transition: border-color .3s; }
-  .nav.scrolled { border-bottom-color: rgba(0,0,0,.08); }
-  .nav-inner { max-width: 1120px; margin: 0 auto; padding: 12px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
-  .nav-links { display: flex; align-items: center; gap: 28px; }
-  .nav-links a { font-size: 14px; font-weight: 500; color: var(--muted); transition: color .2s; }
-  .nav-links a:hover { color: var(--ink); }
-  .nav-links .pill-wa { color: #fff; }
-  .nav-links .pill-wa:hover { color: #fff; }
-
-  /* PÍLULAS E BOTÕES */
-  .pill-wa { display: inline-flex; align-items: center; gap: 8px; background: var(--ink); color: #fff; font-weight: 600; font-size: 14px; padding: 10px 18px; border-radius: 999px; transition: transform .2s var(--ease), background .2s; }
-  .pill-wa:hover { background: #000; transform: translateY(-1px); }
-  .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--ok); box-shadow: 0 0 0 0 rgba(48,209,88,.6); animation: ping 2.4s infinite; }
-  @keyframes ping { 0% { box-shadow: 0 0 0 0 rgba(48,209,88,.55); } 70%, 100% { box-shadow: 0 0 0 8px rgba(48,209,88,0); } }
-
-  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; font-weight: 600; font-size: 16px; padding: 16px 28px; border-radius: 999px; transition: transform .2s var(--ease), background .2s, box-shadow .2s; }
-  .btn:hover { transform: translateY(-2px); }
-  .btn-dark { background: var(--ink); color: #fff; }
-  .btn-dark:hover { background: #000; box-shadow: 0 10px 24px rgba(0,0,0,.18); }
-  .btn-light { background: #fff; color: var(--ink); box-shadow: inset 0 0 0 1px var(--line); }
-  .btn-light:hover { box-shadow: inset 0 0 0 1px var(--ink); }
-  .btn .arrow { transition: transform .2s var(--ease); }
-  .btn:hover .arrow { transform: translateX(3px); }
-
-  /* TÍTULOS DE SEÇÃO */
-  .kicker { font-size: 13px; font-weight: 500; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); margin-bottom: 16px; }
-  .dark .kicker { color: var(--muted-dark); }
-  .h2 { font-size: 48px; font-weight: 600; letter-spacing: -.035em; line-height: 1.06; margin-bottom: 18px; }
-  .sub { font-size: 19px; color: var(--muted); line-height: 1.6; max-width: 620px; }
-  .dark .sub { color: var(--muted-dark); }
-  .section { padding: 112px 24px; }
-  .section-head { margin-bottom: 56px; }
-
-  /* HERO */
-  .hero { padding: 64px 24px 112px; }
-  .hero-grid { display: grid; grid-template-columns: 1.05fr 1fr; gap: 48px; align-items: center; }
-  .eyebrow { display: inline-flex; align-items: center; gap: 8px; background: #fff; border-radius: 999px; padding: 7px 14px 7px 10px; font-size: 13px; font-weight: 500; color: var(--muted); box-shadow: var(--shadow); margin-bottom: 28px; }
-  .eyebrow svg { width: 14px; height: 14px; }
-  .hero h1 { font-size: 60px; font-weight: 600; letter-spacing: -.045em; line-height: 1.03; margin-bottom: 24px; }
-  .hero p { font-size: 19px; color: var(--muted); line-height: 1.6; max-width: 540px; margin-bottom: 36px; }
-  .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
-  .hero-checks { display: flex; flex-wrap: wrap; gap: 10px 22px; margin-top: 36px; }
-  .hero-checks span { display: inline-flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 500; color: var(--ink); }
-  .hero-checks .chk { width: 18px; height: 18px; }
-
-  /* Ilustração do hero */
-  .art { position: relative; aspect-ratio: 1 / .92; }
-  .art-svg { width: 100%; height: 100%; }
-  .sun-rays { transform-origin: 318px 92px; animation: spin 40s linear infinite; }
-  @keyframes spin { to { transform: rotate(360deg); } }
-  .shine { animation: shine 6s var(--ease) infinite; }
-  @keyframes shine { 0%, 55% { transform: translateX(-340px); } 100% { transform: translateX(380px); } }
-
-  .float { position: absolute; background: #fff; border-radius: 22px; box-shadow: var(--shadow-hover); padding: 14px 16px; display: flex; align-items: center; gap: 12px; animation: bob 6s ease-in-out infinite; }
-  .float strong { display: block; font-size: 15px; font-weight: 600; letter-spacing: -.01em; }
-  .float small { display: block; font-size: 12px; color: var(--muted); margin-top: 2px; }
-  .float-a { left: -4%; top: 6%; }
-  .float-b { right: -2%; bottom: 4%; animation-delay: -3s; }
-  .float-c { left: 2%; bottom: 14%; background: var(--card-dark); color: #fff; animation-delay: -1.5s; }
-  .float-c small { color: var(--muted-dark); }
-  @keyframes bob { 0%, 100% { translate: 0 0; } 50% { translate: 0 -8px; } }
-
-  .bars { display: flex; align-items: flex-end; gap: 6px; height: 34px; margin-left: 6px; }
-  .bars i { display: block; width: 14px; border-radius: 4px; height: 100%; transform-origin: bottom; }
-  .bars i:first-child { background: #d2d2d7; height: 70%; }
-  .bars i:last-child { background: var(--accent); }
-  .js .reveal .bars i { transform: scaleY(0); transition: transform .8s var(--ease) .6s; }
-  .js .reveal.in .bars i { transform: scaleY(1); }
-  .js .reveal .bars i:last-child { transition-delay: .75s; }
-
-  .gauge { width: 56px; height: 34px; }
-  .needle { transform-origin: 28px 30px; transform: rotate(38deg); }
-  .js .reveal .needle { transform: rotate(-80deg); transition: transform 1.2s var(--ease) .8s; }
-  .js .reveal.in .needle { transform: rotate(38deg); }
-
-  .big-mini { font-size: 30px; font-weight: 600; letter-spacing: -.04em; line-height: 1; }
-
-  /* SERVIÇOS */
-  .services { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-  .service { background: var(--card); border-radius: 32px; padding: 14px 14px 28px; box-shadow: var(--shadow); display: flex; flex-direction: column; transition: transform .35s var(--ease), box-shadow .35s var(--ease); }
-  .service:hover { transform: translateY(-6px); box-shadow: var(--shadow-hover); }
-  .service-art { background: var(--bg); border-radius: 22px; height: 150px; display: flex; align-items: center; justify-content: center; margin-bottom: 24px; position: relative; overflow: hidden; }
-  .service-art svg { width: 168px; height: auto; transition: transform .5s var(--ease); }
-  .service:hover .service-art svg { transform: scale(1.06); }
-  .service-body { padding: 0 14px; display: flex; flex-direction: column; flex: 1; }
-  .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
-  .tag { font-size: 12px; font-weight: 600; padding: 5px 10px; border-radius: 999px; }
-  .tag-online { background: #e6f6ec; color: #1a7a3c; }
-  .tag-local { background: #fff1d6; color: #8a5a00; }
-  .service h3 { font-size: 23px; font-weight: 600; letter-spacing: -.025em; line-height: 1.2; margin-bottom: 10px; }
-  .service p { font-size: 15px; color: var(--muted); line-height: 1.6; margin-bottom: 20px; }
-  .service ul { list-style: none; margin-bottom: 24px; display: grid; gap: 10px; }
-  .service li { display: flex; gap: 10px; align-items: flex-start; font-size: 14px; line-height: 1.45; }
-  .service li .chk { width: 18px; height: 18px; margin-top: 1px; }
-  .price { border-radius: 18px; padding: 14px 18px; margin: auto 0 14px; background: var(--bg); font-size: 14px; color: var(--muted); }
-  .price strong { display: block; font-size: 20px; color: var(--ink); font-weight: 600; letter-spacing: -.02em; }
-  .price.hot { background: var(--accent); color: rgba(29,29,31,.75); }
-  .price.hot strong { font-size: 32px; letter-spacing: -.04em; line-height: 1.05; }
-  .service .btn { width: 100%; padding: 14px 20px; font-size: 15px; }
-
-  .note { margin-top: 28px; display: flex; gap: 14px; align-items: flex-start; background: #fff; border-radius: 24px; padding: 20px 24px; font-size: 14px; color: var(--muted); line-height: 1.65; box-shadow: var(--shadow); }
-  .note svg { width: 20px; height: 20px; flex-shrink: 0; margin-top: 1px; }
-
-  /* FAIXA PRETA (24h / R$ 99) */
-  .band { background: var(--black); color: #f5f5f7; padding: 112px 24px; }
-  .band-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 56px; align-items: center; }
-  .band .link { display: inline-flex; align-items: center; gap: 6px; margin-top: 28px; color: var(--accent); font-weight: 600; font-size: 16px; }
-  .band .link:hover .arrow { transform: translateX(3px); }
-  .band .arrow { transition: transform .2s var(--ease); }
-  .stat-cards { display: grid; gap: 16px; }
-  .stat { border-radius: 32px; padding: 26px 30px 30px; }
-  .stat small { display: block; font-size: 16px; margin-bottom: 4px; }
-  .stat b { display: block; font-size: 104px; font-weight: 600; letter-spacing: -.06em; line-height: .95; }
-  .stat-dark { background: var(--card-dark); }
-  .stat-dark small { color: var(--muted-dark); }
-  .stat-hot { background: var(--accent); color: var(--ink); }
-  .stat-hot small { color: rgba(29,29,31,.75); }
-  .steps { display: grid; gap: 12px; margin-top: 32px; }
-  .step { display: flex; align-items: center; gap: 14px; background: var(--card-dark); border-radius: 999px; padding: 10px 20px 10px 10px; font-size: 15px; }
-  .step span { width: 32px; height: 32px; border-radius: 50%; background: rgba(245,163,0,.14); color: var(--accent); display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 600; flex-shrink: 0; }
-
-  /* SOBRE */
-  .about { display: grid; grid-template-columns: 400px 1fr; gap: 72px; align-items: center; }
-  .photo { position: relative; }
-  .photo img { width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 40px; box-shadow: var(--shadow-hover); display: block; }
-  .photo .float { left: auto; right: -24px; bottom: 28px; top: auto; }
-  .role { font-size: 17px; font-weight: 500; color: var(--accent-text); margin: -6px 0 24px; }
-  .about p { font-size: 17px; color: #424245; line-height: 1.75; margin-bottom: 16px; }
-  .creds { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
-  .cred { display: inline-flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 500; background: #fff; padding: 10px 16px 10px 12px; border-radius: 999px; box-shadow: var(--shadow); }
-  .cred .chk { width: 18px; height: 18px; }
-
-  /* DIFERENCIAIS (preto) */
-  .dark { background: var(--black); color: #f5f5f7; }
-  .why-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 16px; }
-  .why { grid-column: span 2; background: var(--card-dark); border-radius: 28px; padding: 30px 28px; transition: transform .35s var(--ease), background .35s; }
-  .why:nth-child(4), .why:nth-child(5) { grid-column: span 3; }
-  .why:hover { transform: translateY(-4px); background: #232326; }
-  .why-icon { width: 48px; height: 48px; border-radius: 16px; background: rgba(245,163,0,.12); display: flex; align-items: center; justify-content: center; margin-bottom: 22px; }
-  .why-icon svg { width: 24px; height: 24px; }
-  .why h3 { font-size: 19px; font-weight: 600; letter-spacing: -.02em; margin-bottom: 8px; }
-  .why p { font-size: 15px; color: var(--muted-dark); line-height: 1.6; }
-
-  /* CONTATO (cartão final, como nos vídeos) */
-  .contact { text-align: center; padding: 128px 24px; }
-  .contact .logo { height: 72px; margin: 0 auto 48px; }
-  .contact .h2 { margin-bottom: 14px; }
-  .contact .sub { margin: 0 auto 36px; }
-  .contact-cta { display: flex; justify-content: center; }
-  .contact .pill-wa { font-size: 20px; padding: 16px 28px; gap: 12px; }
-  .contact .pill-wa .dot { width: 10px; height: 10px; }
-  .contact-mail { margin-top: 20px; font-size: 15px; color: var(--muted); }
-  .contact-mail a { color: var(--ink); font-weight: 500; border-bottom: 1px solid var(--line); }
-  .contact-mail a:hover { border-color: var(--ink); }
-  .reach { margin-top: 36px; font-size: 13px; color: var(--muted); }
-
-  /* RODAPÉ */
-  footer { background: var(--black); padding: 56px 24px 110px; }
-  footer .wrap { display: flex; justify-content: space-between; align-items: flex-start; gap: 32px; flex-wrap: wrap; }
-  footer .logo { height: 30px; }
-  footer p { font-size: 13px; color: var(--muted-dark); line-height: 1.8; max-width: 620px; }
-
-  /* WHATSAPP FLUTUANTE */
-  .wa-float { position: fixed; right: 20px; bottom: 20px; z-index: 100; width: 60px; height: 60px; border-radius: 50%; background: #25d366; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 24px rgba(0,0,0,.22); transition: transform .2s var(--ease); }
-  .wa-float:hover { transform: scale(1.08); }
-  .wa-float svg { width: 32px; height: 32px; fill: #fff; }
-
-  /* RESPONSIVO */
-  @media (max-width: 980px) {
-    .hero-grid, .band-grid { grid-template-columns: 1fr; }
-    .art { max-width: 520px; margin: 24px auto 0; width: 100%; }
-    .services { grid-template-columns: 1fr; max-width: 560px; margin: 0 auto; }
-    .about { grid-template-columns: 1fr; gap: 48px; }
-    .photo { max-width: 380px; }
-    .why-grid { grid-template-columns: 1fr 1fr; }
-    .why, .why:nth-child(4), .why:nth-child(5) { grid-column: span 1; }
-    .why:nth-child(5) { grid-column: span 2; }
-  }
-  @media (max-width: 640px) {
-    .nav-links a:not(.pill-wa) { display: none; }
-    .logo { height: 28px; }
-    .hero { padding: 40px 20px 88px; }
-    .hero h1 { font-size: 40px; }
-    .hero p, .sub { font-size: 17px; }
-    .section, .band { padding: 88px 20px; }
-    .h2 { font-size: 34px; }
-    .float { padding: 11px 13px; border-radius: 18px; gap: 10px; }
-    .float strong { font-size: 13px; }
-    .float small { font-size: 11px; }
-    .float-a { left: 0; top: 0; }
-    .float-b { right: 0; bottom: 0; }
-    .float-c { left: 0; bottom: 18%; }
-    .big-mini { font-size: 24px; }
-    .bars { height: 26px; }
-    .bars i { width: 11px; }
-    .stat b { font-size: 80px; }
-    .why-grid { grid-template-columns: 1fr; }
-    .why, .why:nth-child(4), .why:nth-child(5) { grid-column: span 1; }
-    .photo .float { right: 12px; bottom: 16px; }
-    .contact { padding: 96px 20px; }
-    .contact .logo { height: 52px; }
-    .contact .pill-wa { font-size: 18px; }
-  }
-  @media (prefers-reduced-motion: reduce) {
-    *, *::before, *::after { animation: none !important; transition: none !important; }
-    .js .reveal { opacity: 1; transform: none; }
-    .js .circle-reveal { clip-path: none; }
-    .js .reveal .chk path { stroke-dashoffset: 0; }
-    .js .reveal .bars i { transform: none; }
-    .js .reveal .needle { transform: rotate(38deg); }
-  }
-</style>
+<link rel="stylesheet" href="css/site.css">
 </head>
 <body>
 
@@ -344,14 +88,14 @@
     <div>
       <div class="eyebrow reveal"><svg viewBox="0 0 12 18" aria-hidden="true"><polygon points="8.2,0 0,11.7 5.5,11.7 2.7,18 12,6.3 6.5,6.3" fill="#F5A300"/></svg>Análise técnica independente</div>
       <h1 class="reveal" style="--d:1">Decisões seguras em energia e eletricidade <span class="accent">começam com um olhar técnico.</span></h1>
-      <p class="reveal" style="--d:2">Análise de orçamentos de energia solar em todo o Brasil (exceto SC e PR), análise de projetos elétricos em todo o país e análise de instalações elétricas no norte de Santa Catarina, com emissão de TRT.</p>
+      <p class="reveal" style="--d:2">Análise de orçamentos de energia solar em todo o Brasil (exceto SC e PR), análise de projetos elétricos em todo o país e, no norte de Santa Catarina, análise presencial de instalações elétricas com emissão de TRT.</p>
       <div class="hero-actions reveal" style="--d:3">
         <a href="#servicos" class="btn btn-dark">Conheça os serviços <span class="arrow">→</span></a>
         <a href="https://wa.me/5547996463350?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Kucharsky%20El%C3%A9trica." class="btn btn-light">Falar no WhatsApp</a>
       </div>
       <div class="hero-checks reveal" style="--d:4">
         <span><svg class="chk" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#F5A300"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Sem comissão sobre a sua compra</span>
-        <span><svg class="chk" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#F5A300"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Emissão de TRT</span>
+        <span><svg class="chk" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#F5A300"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>TRT nas vistorias</span>
         <span><svg class="chk" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#F5A300"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Nota fiscal</span>
       </div>
     </div>
@@ -500,19 +244,19 @@
       <img src="img/gabriel-kucharsky.webp" alt="Gabriel Kucharsky, responsável técnico da Kucharsky Elétrica" width="640" height="641" loading="lazy">
       <div class="float">
         <svg class="chk" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#F5A300"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <div><strong>Emissão de TRT</strong><small>Responsabilidade técnica</small></div>
+        <div><strong>TRT nas vistorias</strong><small>Responsabilidade técnica</small></div>
       </div>
     </div>
     <div>
       <div class="kicker reveal">Quem faz a análise</div>
       <h2 class="h2 reveal" style="--d:1">Gabriel Kucharsky</h2>
-      <div class="role reveal" style="--d:1">Técnico em Eletroeletrônica · Graduado em Engenharia Elétrica</div>
-      <p class="reveal" style="--d:2">Sou técnico em eletroeletrônica, formado pelo Instituto Federal, e graduado em Engenharia Elétrica. Atuo profissionalmente no setor de energia solar, na área de engenharia, em Joinville (SC) — por isso conheço de perto como propostas fotovoltaicas são dimensionadas, montadas e precificadas.</p>
-      <p class="reveal" style="--d:3">A Kucharsky Elétrica nasceu para colocar essa experiência a serviço de quem está do outro lado da mesa: o cliente que precisa de uma opinião técnica clara antes de investir. Cada análise é feita pessoalmente por mim, com emissão de TRT e explicação em linguagem simples.</p>
+      <div class="role reveal" style="--d:1">Técnico em Eletroeletrônica · Bacharel em Engenharia Elétrica</div>
+      <p class="reveal" style="--d:2">Sou técnico em eletroeletrônica, formado pelo Instituto Federal, e bacharel em Engenharia Elétrica. Atuo profissionalmente no setor de energia solar, na área de engenharia, em Joinville (SC) — por isso conheço de perto como propostas fotovoltaicas são dimensionadas, montadas e precificadas.</p>
+      <p class="reveal" style="--d:3">A Kucharsky Elétrica nasceu para colocar essa experiência a serviço de quem está do outro lado da mesa: o cliente que precisa de uma opinião técnica clara antes de investir. Cada análise é feita pessoalmente por mim, com explicação em linguagem simples.</p>
       <div class="creds reveal" style="--d:4">
-        <span class="cred"><svg class="chk" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#F5A300"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Graduação em Engenharia Elétrica</span>
+        <span class="cred"><svg class="chk" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#F5A300"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Bacharel em Engenharia Elétrica</span>
         <span class="cred"><svg class="chk" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#F5A300"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Técnico em Eletroeletrônica — Instituto Federal</span>
-        <span class="cred"><svg class="chk" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#F5A300"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Emissão de TRT</span>
+        <span class="cred"><svg class="chk" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#F5A300"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Emissão de TRT nas vistorias</span>
       </div>
     </div>
   </div>
@@ -566,6 +310,7 @@
       <a href="https://wa.me/5547996463350?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Kucharsky%20El%C3%A9trica." class="pill-wa"><i class="dot"></i>(47) 99646-3350</a>
     </div>
     <p class="contact-mail reveal" style="--d:4">ou por e-mail: <a href="mailto:gabriel@kucharskyeletrica.com">gabriel@kucharskyeletrica.com</a></p>
+    <p class="contact-mail reveal" style="--d:4">Instagram: <a href="https://www.instagram.com/kucharskyeletrica/" target="_blank" rel="noopener">@kucharskyeletrica</a></p>
     <p class="reach reveal" style="--d:5">Análise solar 100% online · Todo o Brasil, exceto SC e PR</p>
   </div>
 </section>

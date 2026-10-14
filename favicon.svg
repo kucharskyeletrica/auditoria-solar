@@ -1,10 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="14" fill="#0d2157"/>
-  <g stroke="#f0a500" stroke-width="4" stroke-linecap="round">
-    <line x1="32" y1="8" x2="32" y2="14"/><line x1="32" y1="50" x2="32" y2="56"/>
-    <line x1="8" y1="32" x2="14" y2="32"/><line x1="50" y1="32" x2="56" y2="32"/>
-    <line x1="15" y1="15" x2="19" y2="19"/><line x1="45" y1="45" x2="49" y2="49"/>
-    <line x1="15" y1="49" x2="19" y2="45"/><line x1="45" y1="19" x2="49" y2="15"/>
+  <rect width="64" height="64" rx="14" fill="#000"/>
+  <g stroke="#f5f5f7" stroke-width="3.6" fill="none">
+    <line x1="14" y1="18" x2="14" y2="46"/>
+    <line x1="32" y1="18" x2="15.5" y2="33"/>
+    <line x1="21" y1="27.5" x2="32.5" y2="46"/>
   </g>
-  <circle cx="32" cy="32" r="12" fill="#f0a500"/>
+  <polygon points="48.5,18 37,34.5 44.7,34.5 40.8,46 53.6,28.1 46,28.1" fill="#f5a300"/>
 </svg>
