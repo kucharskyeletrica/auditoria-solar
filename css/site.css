@@ -40,8 +40,12 @@ svg { display: block; }
 /* ENTRADA AO ROLAR */
 .js .reveal { opacity: 0; transform: translateY(28px); transition: opacity .9s var(--ease), transform .9s var(--ease); transition-delay: calc(var(--d, 0) * 90ms); }
 .js .reveal.in { opacity: 1; transform: none; }
-.js .circle-reveal { clip-path: circle(0% at 50% 30%); transition: clip-path 1.4s var(--ease); }
+.js .circle-reveal { clip-path: circle(0% at 50% 30%); transition: clip-path .9s var(--ease); }
 .js .circle-reveal.in { clip-path: circle(120% at 50% 30%); }
+/* Quem já viu a faixa nesta página: aparece pronta, sem animação */
+.js.faixa-vista .circle-reveal { clip-path: none; transition: none; }
+.js.faixa-vista .circle-reveal .reveal { opacity: 1; transform: none; transition: none; }
+.js.faixa-vista .circle-reveal .chk path { stroke-dashoffset: 0; transition: none; }
 
 /* CABEÇALHO */
 .nav { position: sticky; top: 0; z-index: 50; background: rgba(245,245,247,.78); -webkit-backdrop-filter: saturate(180%) blur(20px); backdrop-filter: saturate(180%) blur(20px); border-bottom: 1px solid transparent; transition: border-color .3s; }

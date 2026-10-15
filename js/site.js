@@ -2,6 +2,13 @@
 // Fica em arquivo separado porque a política de segurança do site não permite scripts dentro do HTML.
 document.documentElement.classList.add('js');
 
+// Faixas pretas: abrem em círculo só na primeira visita a cada página.
+// Nas próximas visitas já aparecem prontas. Fica guardado só no navegador da pessoa (sem cookie).
+var CHAVE_FAIXA = 'faixa-vista:' + location.pathname;
+var faixaVista = false;
+try { faixaVista = localStorage.getItem(CHAVE_FAIXA) === '1'; } catch (e) {}
+if (faixaVista) document.documentElement.classList.add('faixa-vista');
+
 document.addEventListener('DOMContentLoaded', function () {
   var reduz = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -9,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
   function contar(el) {
     var alvo = parseInt(el.getAttribute('data-count'), 10);
     if (reduz || !alvo) return;
-    var inicio = null, dur = 1100;
+    var inicio = null, dur = 800;
     function passo(t) {
       if (!inicio) inicio = t;
       var p = Math.min((t - inicio) / dur, 1);
@@ -37,12 +44,27 @@ document.addEventListener('DOMContentLoaded', function () {
 
   document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
 
+  // Abre a faixa e já mostra o que está dentro dela (sem esperar o círculo terminar)
+  function abreFaixa(el, animar) {
+    el.classList.add('in');
+    el.querySelectorAll('.reveal').forEach(function (r) {
+      io.unobserve(r);
+      r.classList.add('in');
+      if (animar) r.querySelectorAll('[data-count]').forEach(contar);
+    });
+    if (animar) { try { localStorage.setItem(CHAVE_FAIXA, '1'); } catch (e) {} }
+  }
+
   // Revelação circular: o navegador considera um elemento recortado como "invisível",
   // então aqui a posição é conferida na rolagem em vez de usar o observador.
   var circulos = Array.prototype.slice.call(document.querySelectorAll('.circle-reveal'));
+  if (faixaVista) {
+    circulos.forEach(function (el) { abreFaixa(el, false); });
+    circulos = [];
+  }
   function confereCirculos() {
     circulos = circulos.filter(function (el) {
-      if (el.getBoundingClientRect().top < window.innerHeight * 0.8) { el.classList.add('in'); return false; }
+      if (el.getBoundingClientRect().top < window.innerHeight * 0.92) { abreFaixa(el, true); return false; }
       return true;
     });
   }
